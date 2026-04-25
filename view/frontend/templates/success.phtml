@@ -1,0 +1,10 @@
+<?php
+/**
+ * @copyright Copyright (c) 2025 Aurora Creation Sp. z o.o. (https://auroracreation.com)
+ */
+
+/** @var \Magento\Framework\View\Element\Template $block */
+?>
+<script>
+    window.location.replace('<?= $block->escapeUrl($block->getUrl('checkout/onepage/success')) ?>');
+</script>
