@@ -177,7 +177,7 @@ class Installment implements ArgumentInterface
      * @return bool
      * @throws NoSuchEntityException
      */
-    public function isAvailable(float $price = null)
+    public function isAvailable(?float $price = null)
     {
         $minProductPrice = $this->dataHelper->getConfigValue(self::MIN_PRODUCT_PRICE);
         $maxProductPrice = $this->dataHelper->getConfigValue(self::MAX_PRODUCT_PRICE);
@@ -192,7 +192,7 @@ class Installment implements ArgumentInterface
      * @return bool
      * @throws NoSuchEntityException
      */
-    public function isAvailableInCart(float $price = null)
+    public function isAvailableInCart(?float $price = null)
     {
         $minProductPrice = $this->dataHelper->getConfigValue(self::MIN_ORDER_TOTAL);
         $maxProductPrice = $this->dataHelper->getConfigValue(self::MAX_ORDER_TOTAL);
